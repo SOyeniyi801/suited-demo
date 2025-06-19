@@ -1,329 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Suited - Professional Women's Fashion</title>
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(135deg, #e6f2ff 0%, #d4e6f7 100%);
-            min-height: 100vh;
-            color: #2c3e50;
-            line-height: 1.6;
-        }
+      body {
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #e6f2ff 0%, #d4e6f7 100%);
+        min-height: 100vh;
+        color: #2c3e50;
+        line-height: 1.6;
+      }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-        /* Header Section */
-        .header {
-            text-align: center;
-            padding: 60px 0 40px;
-        }
+      /* Header Section */
+      .header {
+        text-align: center;
+        padding: 60px 0 40px;
+      }
 
+      .brand-name {
+        font-family: "Dancing Script", cursive;
+        font-size: 5rem;
+        font-weight: 600;
+        color: #c65d07;
+        margin-bottom: 30px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .tagline {
+        font-size: 1.2rem;
+        color: #34495e;
+        max-width: 800px;
+        margin: 0 auto;
+        font-weight: 400;
+      }
+
+      /* Main Content Section */
+      .main-content {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        margin: 80px 0;
+        flex-wrap: wrap;
+      }
+
+      .image-section {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .signature-image {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        border-radius: 12px;
+        /* box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease; */
+      }
+
+      .content-section {
+        flex: 1;
+        min-width: 300px;
+      }
+
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: #2c3e50;
+        margin-bottom: 25px;
+      }
+
+      .section-description {
+        font-size: 1.1rem;
+        color: #34495e;
+        margin-bottom: 40px;
+        line-height: 1.7;
+      }
+
+      /* Email Signup Form */
+      .signup-form {
+        display: flex;
+        gap: 15px;
+        margin-top: 30px;
+        flex-wrap: wrap;
+      }
+
+      .email-input {
+        flex: 1;
+        min-width: 250px;
+        padding: 15px 20px;
+        border: 2px solid #bdc3c7;
+        border-radius: 8px;
+        font-size: 1rem;
+        background: rgba(255, 255, 255, 0.8);
+        transition: all 0.3s ease;
+      }
+
+      .email-input:focus {
+        outline: none;
+        border-color: #c65d07;
+        background: rgba(255, 255, 255, 0.95);
+        box-shadow: 0 0 0 3px rgba(198, 93, 7, 0.1);
+      }
+
+      .signup-btn {
+        padding: 15px 30px;
+        background: #c65d07;
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        min-width: 120px;
+      }
+
+      .signup-btn:hover {
+        background: #a04d06;
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(198, 93, 7, 0.3);
+      }
+
+      .signup-btn:active {
+        transform: translateY(0);
+      }
+
+      .btn-link {
+        display: inline-block;
+        padding: 0.75rem 1.5rem;
+        background-color: #3d5a80; /* deep blue — you can tweak */
+        color: #ffffff;
+        font-weight: 600;
+        font-size: 1rem;
+        border: none;
+        border-radius: 6px;
+        text-decoration: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, transform 0.2s ease;
+      }
+
+      .btn-link:hover {
+        background-color: #2c4764;
+        transform: translateY(-2px);
+      }
+
+      .btn-subtext {
+        font-size: 12px;
+      }
+
+      /* Footer */
+      .footer {
+        border-top: 1px solid #bdc3c7;
+        padding: 30px 0;
+        margin-top: 80px;
+      }
+
+      .footer-text {
+        color: #7f8c8d;
+        font-size: 0.9rem;
+      }
+
+      /* Success Message */
+      .success-message {
+        background: #d4edda;
+        color: #155724;
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 20px;
+        display: none;
+        border: 1px solid #c3e6cb;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
         .brand-name {
-            font-family: 'Dancing Script', cursive;
-            font-size: 5rem;
-            font-weight: 600;
-            color: #c65d07;
-            margin-bottom: 30px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+          font-size: 3.5rem;
         }
 
         .tagline {
-            font-size: 1.2rem;
-            color: #34495e;
-            max-width: 800px;
-            margin: 0 auto;
-            font-weight: 400;
+          font-size: 1.1rem;
+          padding: 0 20px;
         }
 
-        /* Main Content Section */
         .main-content {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            margin: 80px 0;
-            flex-wrap: wrap;
-        }
-
-        .image-section {
-            flex: 1;
-            min-width: 300px;
-        }
-
-        .signature-image {
-            width: 100%;
-            max-width: 450px;
-            height: auto;
-            border-radius: 12px;
-            /* box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease; */
-        }
-
-        .content-section {
-            flex: 1;
-            min-width: 300px;
+          flex-direction: column;
+          gap: 40px;
+          margin: 60px 0;
         }
 
         .section-title {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: #2c3e50;
-            margin-bottom: 25px;
+          font-size: 1.8rem;
         }
 
-        .section-description {
-            font-size: 1.1rem;
-            color: #34495e;
-            margin-bottom: 40px;
-            line-height: 1.7;
-        }
-
-        /* Email Signup Form */
         .signup-form {
-            display: flex;
-            gap: 15px;
-            margin-top: 30px;
-            flex-wrap: wrap;
+          flex-direction: column;
         }
 
         .email-input {
-            flex: 1;
-            min-width: 250px;
-            padding: 15px 20px;
-            border: 2px solid #bdc3c7;
-            border-radius: 8px;
-            font-size: 1rem;
-            background: rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
+          min-width: 100%;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .brand-name {
+          font-size: 2.8rem;
         }
 
-        .email-input:focus {
-            outline: none;
-            border-color: #c65d07;
-            background: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 0 0 3px rgba(198, 93, 7, 0.1);
+        .container {
+          padding: 0 15px;
         }
 
-        .signup-btn {
-            padding: 15px 30px;
-            background: #c65d07;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            min-width: 120px;
+        .header {
+          padding: 40px 0 30px;
         }
-
-        .signup-btn:hover {
-            background: #a04d06;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(198, 93, 7, 0.3);
-        }
-
-        .signup-btn:active {
-            transform: translateY(0);
-        }
-
-        /* Footer */
-        .footer {
-            border-top: 1px solid #bdc3c7;
-            padding: 30px 0;
-            margin-top: 80px;
-        }
-
-        .footer-text {
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
-
-        /* Success Message */
-        .success-message {
-            background: #d4edda;
-            color: #155724;
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            display: none;
-            border: 1px solid #c3e6cb;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .brand-name {
-                font-size: 3.5rem;
-            }
-
-            .tagline {
-                font-size: 1.1rem;
-                padding: 0 20px;
-            }
-
-            .main-content {
-                flex-direction: column;
-                gap: 40px;
-                margin: 60px 0;
-            }
-
-            .section-title {
-                font-size: 1.8rem;
-            }
-
-            .signup-form {
-                flex-direction: column;
-            }
-
-            .email-input {
-                min-width: 100%;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .brand-name {
-                font-size: 2.8rem;
-            }
-
-            .container {
-                padding: 0 15px;
-            }
-
-            .header {
-                padding: 40px 0 30px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <!-- Header Section -->
-        <header class="header">
-            <img src="suited-logo-brown.png" alt="Professional woman wearing a cream blazer with navy trim" class="signature-image">
-            <!-- <h1 class="brand-name">Suited</h1> -->
-            <p class="tagline">
-                Effortlessly blending confidence, femininity, and intention—Suited creates tailored pieces 
-                that help you look powerful and lead powerfully.
-            </p>
-        </header>
+      <!-- Header Section -->
+      <header class="header">
+        <img
+          src="suited-logo-brown.png"
+          alt="Professional woman wearing a cream blazer with navy trim"
+          class="signature-image"
+        />
+        <!-- <h1 class="brand-name">Suited</h1> -->
+        <p class="tagline">
+          Effortlessly blending confidence, femininity, and intention—Suited
+          creates tailored pieces that help you look powerful and lead
+          powerfully.
+        </p>
+      </header>
 
-        <!-- Main Content Section -->
-        <main class="main-content">
-            <div class="image-section">
-                <img src="/Blazer Dress_Staple Piece Example Image 1.png" alt="Professional woman wearing a cream blazer with navy trim" class="signature-image">
-            </div>
-            
-            <div class="content-section">
-                <h2 class="section-title">Our Signature Piece</h2>
-                <p class="section-description">
-                    Effortlessly blending confidence, femininity, and intention—Suited creates 
-                    tailored pieces that help you look powerful and lead powerfully.
-                </p>
-                
-                <form class="signup-form" id="signupForm">
-                    <input 
-                        type="email" 
-                        class="email-input" 
-                        placeholder="Email" 
-                        required 
-                        id="emailInput"
-                        aria-label="Email address"
-                    >
-                    <button type="submit" class="signup-btn">Sign Up</button>
-                </form>
-                
-                <div class="success-message" id="successMessage">
-                    Thank you for signing up! We'll keep you updated on our latest collections.
-                </div>
-            </div>
-        </main>
+      <!-- Main Content Section -->
+      <main class="main-content">
+        <div class="image-section">
+          <img
+            src="/Blazer Dress_Staple Piece Example Image 1.png"
+            alt="Professional woman wearing a cream blazer with navy trim"
+            class="signature-image"
+          />
+        </div>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p class="footer-text">Suited4U LLC</p>
-        </footer>
+        <div class="content-section">
+          <h2 class="section-title">Our Signature Piece</h2>
+          <p class="section-description">
+            Effortlessly blending confidence, femininity, and intention—Suited
+            creates tailored pieces that help you look powerful and lead
+            powerfully.
+          </p>
+
+          <a href="https://suited4u.store/password"><button type="button" class="btn-link">
+            Click Here to sign up for email updates
+          </button></a>
+          <p class="btn-subtex">You will be redirected to our official site</p>
+
+          <div class="success-message" id="successMessage">
+            Thank you for signing up! We'll keep you updated on our latest
+            collections.
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <p class="footer-text">Suited4U LLC</p>
+      </footer>
     </div>
 
     <script>
-        // Email signup form handling
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const emailInput = document.getElementById('emailInput');
-            const successMessage = document.getElementById('successMessage');
-            const email = emailInput.value.trim();
-            
-            // Basic email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            if (emailRegex.test(email)) {
-                // Simulate successful signup
-                emailInput.value = '';
-                successMessage.style.display = 'block';
-                
-                // Hide success message after 5 seconds
-                setTimeout(() => {
-                    successMessage.style.display = 'none';
-                }, 5000);
-                
-                // Add some visual feedback
-                const button = e.target.querySelector('.signup-btn');
-                const originalText = button.textContent;
-                button.textContent = 'Signed Up!';
-                button.style.background = '#27ae60';
-                
-                setTimeout(() => {
-                    button.textContent = originalText;
-                    button.style.background = '#c65d07';
-                }, 2000);
-                
-                console.log('Email signed up:', email);
-            } else {
-                // Show error for invalid email
-                emailInput.style.borderColor = '#e74c3c';
-                emailInput.focus();
-                
-                setTimeout(() => {
-                    emailInput.style.borderColor = '#bdc3c7';
-                }, 3000);
-            }
-        });
+    
+      // Add smooth scrolling for better UX
+      document.addEventListener("DOMContentLoaded", function () {
+        // Add fade-in animation
+        const elements = document.querySelectorAll(
+          ".header, .main-content, .footer"
+        );
+        elements.forEach((el, index) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(20px)";
+          el.style.transition = "opacity 0.6s ease, transform 0.6s ease";
 
-        // Add smooth scrolling for better UX
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add fade-in animation
-            const elements = document.querySelectorAll('.header, .main-content, .footer');
-            elements.forEach((el, index) => {
-                el.style.opacity = '0';
-                el.style.transform = 'translateY(20px)';
-                el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                
-                setTimeout(() => {
-                    el.style.opacity = '1';
-                    el.style.transform = 'translateY(0)';
-                }, index * 200);
-            });
+          setTimeout(() => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          }, index * 200);
         });
+      });
 
-        // Add hover effects for interactive elements
-        document.querySelectorAll('.signature-image, .signup-btn').forEach(element => {
-            element.addEventListener('mouseenter', function() {
-                this.style.cursor = 'pointer';
-            });
+      // Add hover effects for interactive elements
+      document
+        .querySelectorAll(".signature-image, .signup-btn")
+        .forEach((element) => {
+          element.addEventListener("mouseenter", function () {
+            this.style.cursor = "pointer";
+          });
         });
     </script>
-</body>
+  </body>
 </html>
